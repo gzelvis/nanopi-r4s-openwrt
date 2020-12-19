@@ -1,13 +1,12 @@
-## OpenWrt Firmwares for NanoPi-R2S
+## OpenWrt Firmwares for NanoPi-R4S
 ### ⚠ WARNING: USE IT UNDER YOUR OWN RISK.
 - - -
-## Last Building Status: ![NanoPi R2S OpenWrt](https://github.com/1715173329/nanopi-r2s-openwrt/workflows/NanoPi%20R2S%20OpenWrt/badge.svg)
-## Download: [@nanopi\_r2s](https://t.me/nanopi\_r2s) or [Actions](https://github.com/1715173329/nanopi-r2s-openwrt/actions) \(Login Needed\)
+## Last Building Status: ![NanoPi R4S OpenWrt](https://github.com/1715173329/nanopi-r4s-openwrt/workflows/NanoPi%20R4S%20OpenWrt/badge.svg)
+## Download: [@nanopi\_r2s](https://t.me/nanopi\_r2s) or [Actions](https://github.com/1715173329/nanopi-r4s-openwrt/actions) \(Login Needed\)
 - - -
 ## Introduction
 - ### Usage
-0. There're two versions: SHAPSHOT and 18.06, you can choose according to your preferences.<br/>
- Please make sure at least **1G** space left on you SD card.
+0. Please make sure at least **1G** space left on you SD card.<br/>
 1. Default login addr is [192.168.1.1](192.168.1.1), username / password: `root` / `password`.<br/>
  Please change the login password **as soon as possible** once you logined.
 2. Once you flashed the firmware into SD card, you may simply use "Upgrade" function<br/>
@@ -32,7 +31,7 @@
 - - -
 ## Announcement
 ### License
-[GNU General Public License v3.0](https://github.com/1715173329/nanopi-r2s-openwrt/blob/master/LICENSE)
+[GNU General Public License v3.0](https://github.com/1715173329/nanopi-r4s-openwrt/blob/master/LICENSE)
 ### Source Code
 [project-openwrt/openwrt](https://github.com/project-openwrt/openwrt)
 ### Non-profit Uses Only
