@@ -40,30 +40,30 @@ jobs:
         cp -f "${GITHUB_WORKSPACE}/configs/1806-config.seed" ".config"
         make defconfig
         make -j$[$(nproc)+1]
-        mv -f bin/targets/rockchip/armv8/openwrt-rockchip-armv8-friendlyarm_nanopi-r4s-*.img.gz ../
-        mv -f "bin/targets/rockchip/armv8/sha256sums" "../openwrt-18.06-sha256sums"
+        mv -f bin/targets/rockchip/armv8/openwrt-rockchip-armv8-friendlyarm_nanopi-r4s-*-sysupgrade.img.gz ../
+        mv -f bin/targets/rockchip/armv8/sha256sums ../openwrt-18.06-sha256sums
     - name: Rebuild OpenWrt-18.06 to Collect Error Log
       if: failure()
       run: |
         cd "/home/runner/openwrt"
         make -j1 V=s
-        mv -f bin/targets/rockchip/armv8/openwrt-rockchip-armv8-friendlyarm_nanopi-r4s-*.img.gz ../
-        mv -f "bin/targets/rockchip/armv8/sha256sums" "../openwrt-18.06-sha256sums"
+        mv -f bin/targets/rockchip/armv8/openwrt-rockchip-armv8-friendlyarm_nanopi-r4s-*-sysupgrade.img.gz ../
+        mv -f bin/targets/rockchip/armv8/sha256sums ../openwrt-18.06-sha256sums
     - name: Upload OpenWrt-18.06 SHA256SUM Hash
       uses: actions/upload-artifact@v2
       with:
         name: openwrt-18.06-sha256sums
         path: /home/runner/openwrt-18.06-sha256sums
-    - name: Upload OpenWrt-18.06 EXT4 Firmware
+    - name: Upload OpenWrt-18.06 Firmware for 1GB Version
       uses: actions/upload-artifact@v2
       with:
-        name: openwrt-18.06-rockchip-armv8-friendlyarm_nanopi-r4s-ext4-sysupgrade.img.gz
-        path: /home/runner/openwrt-18.06-rockchip-armv8-friendlyarm_nanopi-r4s-*-ext4-sysupgrade.img.gz
-    - name: Upload OpenWrt-18.06 SquashFS Firmware
+        name: OpenWrt 18.06 Firmware for 1GB Version
+        path: /home/runner/openwrt-rockchip-armv8-friendlyarm_nanopi-r4s-1gb-*-sysupgrade.img.gz
+    - name: Upload OpenWrt-18.06 Firmware for 4GB Version
       uses: actions/upload-artifact@v2
       with:
-        name: openwrt-18.06-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz
-        path: /home/runner/openwrt-18.06-rockchip-armv8-friendlyarm_nanopi-r4s-*-squashfs-sysupgrade.img.gz
+        name: OpenWrt 18.06 Firmware for 4GB Version
+        path: /home/runner/openwrt-rockchip-armv8-friendlyarm_nanopi-r4s-4gb-*-sysupgrade.img.gz
   Cleanup-Old-Artifacts:
     needs: [OpenWrt-18_06]
     runs-on: ubuntu-18.04
