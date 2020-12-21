@@ -4,7 +4,6 @@ CONFIG_TARGET_MULTI_PROFILE=y
 CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r4s-1gb=y
 CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r4s-4gb=y
 CONFIG_DEVEL=y
-#CONFIG_DEFAULT_coremark=y
 
 CONFIG_ATH_USER_REGD=y
 CONFIG_DRIVER_11AC_SUPPORT=y
