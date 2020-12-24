@@ -34,7 +34,6 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         patch -p1 < "${GITHUB_WORKSPACE}/patches/1806-modify_for_r4s.patch"
-        patch -p1 < "${GITHUB_WORKSPACE}/patches/0003-rockchip-overclock-to-2.2-1.8-GHz-for-NanoPi4-device.patch"
     - name: Build OpenWrt-18.06
       run: |
         cd "/home/runner/openwrt"
